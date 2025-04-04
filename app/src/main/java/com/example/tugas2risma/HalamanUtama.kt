@@ -8,7 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tugas2risma.databinding.ActivityHalamanUtamaBinding
 
-class HalamanUtama : AppCompatActivity() {
+class  HalamanUtama : AppCompatActivity() {
     private lateinit var binding: ActivityHalamanUtamaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +23,19 @@ class HalamanUtama : AppCompatActivity() {
         setContentView(binding.root)
         
 
-        binding.btntgs4.setOnClickListener{
+        binding.button3.setOnClickListener{
             val intent = Intent(this, RecyclerActivity ::class.java)
             startActivity(intent)
         }
-        binding.btsend.setOnClickListener{
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.putExtra(Intent.EXTRA_TEXT,binding.etmessage.text.toString())
-            intent.type="text/plain"
-        }
-       startActivity(Intent(Intent.createChooser(intent,"share to")))
+        binding.button4.setOnClickListener {
+            val textToSend = "haloo!"
+            val sendIntent = Intent(Intent.ACTION_SEND)
+            sendIntent.type = "text/plain"
+            sendIntent.putExtra(Intent.EXTRA_TEXT, textToSend)
+            val chooserIntent =
+                Intent.createChooser(sendIntent, "Pilih aplikasi untuk mengirim pesan")
+            startActivity(chooserIntent)
+          }
     }
 
 }
