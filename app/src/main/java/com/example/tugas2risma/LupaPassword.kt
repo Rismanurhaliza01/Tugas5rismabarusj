@@ -7,10 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tugas2risma.databinding.ActivityLupaPasswordBinding
+import com.example.tugas2risma.databinding.ActivityMainBinding
 
 class LupaPassword : AppCompatActivity() {
 
-    private lateinit var binding : ActivityLupaPasswordBinding
+    private lateinit var binding: ActivityLupaPasswordBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,8 +21,11 @@ class LupaPassword : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.textView7.setOnClickListener{
-            val intent = Intent (this,MainActivity::class.java)
+        binding = ActivityLupaPasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.textView7.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
     }
 }

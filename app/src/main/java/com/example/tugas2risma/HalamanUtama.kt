@@ -21,9 +21,10 @@ class HalamanUtama : AppCompatActivity() {
         }
         binding = ActivityHalamanUtamaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        
 
-        binding.etmessage.setOnClickListener{
-            val intent = Intent(this, MainActivity ::class.java)
+        binding.btntgs4.setOnClickListener{
+            val intent = Intent(this, RecyclerActivity ::class.java)
             startActivity(intent)
         }
         binding.btsend.setOnClickListener{

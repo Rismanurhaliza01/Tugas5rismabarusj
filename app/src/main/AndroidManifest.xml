@@ -16,6 +16,9 @@
             android:name=".HalamanUtama"
             android:exported="false" />
         <activity
+            android:name=".RecyclerActivity"
+            android:exported="false" />
+        <activity
             android:name=".LupaPassword"
             android:exported="true" />
         <activity
