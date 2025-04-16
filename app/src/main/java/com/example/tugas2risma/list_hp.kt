@@ -118,7 +118,7 @@ class list_hp : AppCompatActivity() {
                 "stock 27",
                 R.drawable.poco,
                 "Poco M3",
-                "iPhone 11 hadir dengan layar Liquid Retina HD 6,1 inci dan ditenagai oleh chip A13 Bionic yang sangat cepat. Dikenal dengan kamera ganda yang luar biasa, desain elegan, serta daya tahan baterai yang baik, iPhone 11 menawarkan pengalaman pengguna yang memuaskan dan fitur-fitur canggih."
+                "POCO M3 adalah smartphone yang diluncurkan pada November 2020, dilengkapi dengan layar 6.53 inci, chipset Snapdragon 662, dan baterai besar 6000 mAh. Memiliki kamera utama 48MP dan tersedia dalam varian memori 4GB RAM + 64GB ROM serta 6GB RAM + 128GB ROM."
             )
         )
 
