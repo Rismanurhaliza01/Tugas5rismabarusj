@@ -9,8 +9,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tugas2risma.databinding.ListHpBinding
 
 class list_hp : AppCompatActivity() {
+    private lateinit var binding: ListHpBinding
 
     private lateinit var hpRecyclerView: RecyclerView
     private lateinit var hpAdapter: hpAdapter
@@ -19,13 +21,9 @@ class list_hp : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.list_hp)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.recycler)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        binding = ListHpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         listhp = ArrayList()
         listhp.add(
@@ -37,6 +35,18 @@ class list_hp : AppCompatActivity() {
                 R.drawable.oppo,
                 "Oppo",
                 "xdjbechfbcdhjsxnfehjcbdhfebjbfvjbvjfbfjkrnehjbrhjgfhjrbfrhbkk"
+            )
+        )
+
+        listhp.add(
+            item_hp(
+                R.drawable.vivo,
+                "oviv",
+                "harga: 1.500.000",
+                "stock 20",
+                R.drawable.vivo,
+                "Oppo",
+                "12345"
             )
         )
 
